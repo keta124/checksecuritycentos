@@ -1,0 +1,27 @@
+# Logstash is served by some back end servers.
+# Config server logstash
+# If server client have a local ip
+# host_logstash: 192.168.142.101 
+
+# Use by public ip
+# host_logstash: logstash.ids.ovp.vn
+
+host_logstash: 192.168.142.101
+
+# default_port 5044
+port_logstash: 5044
+
+# Config attt_cmdlog
+path_monitor_cmdlog: "/var/log/attt_cmdlog.log"
+
+#cmdlog_document_type: "attt_monitor_cmdlog"
+
+### Config attt_monitor_login
+#path_monitor_login: /home/vhgs/Check_Security_Centos/MonitorATTT/Output/ATTT_login_ssh.log
+
+#login_document_type: attt_monitor_login
+
+### Config port_monitor
+#path_monitor_port: /home/vhgs/Check_Security_Centos/MonitorATTT/Output/ATTT_port_change.log
+
+#port_document_type: attt_monitor_port
