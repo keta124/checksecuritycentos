@@ -19,8 +19,8 @@ def writefile(file_write,content):
         print "Except writefile"
 
 def makefileyml(dir_path):
-    path = os.path.dirname(os.path.realpath(__file__))
-    statinfo = os.stat(path)
+    #path = os.path.dirname(os.path.realpath(__file__))
+    statinfo = os.stat(dir_path)
     f = open(dir_path,"wb")
     f.close()
     os.chown(dir_path, statinfo.st_uid, statinfo.st_gid)
@@ -52,7 +52,7 @@ def readfileconfig():
     except:
         return {}
 def MakeConfigFilebeat():
-    current_folder_path= os.path.dirname(os.path.dirname(__file__))
+    current_folder_path= os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
     path_monitor_login = ""+str(current_folder_path)+"/MonitorATTT/Output/ATTT_login_ssh.log"
     path_monitor_port = ""+str(current_folder_path)+"/MonitorATTT/Output/ATTT_port_change.log"
     dict_ ={'port_document_type': 'attt_monitor_port', 
@@ -74,17 +74,14 @@ def MakeConfigFilebeat():
     writefile(dir_filebeat,fileyml)
 def Runfilebeat():
     try:
-        current_folder_path= os.path.dirname(os.path.dirname(__file__))
-        chmod_string = "chmod +x "+current_folder_path+"/filebeat/filebeat"
-        print chmod_string
-        chmod_filebeat= str(os.popen(chmod_string).read())
-        run_string = "nohup "+current_folder_path+"/filebeat/filebeat" +" -c "+current_folder_path+"/filebeat/filebeat.yml"
+        current_folder_path= os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
+        run_string = "nohup "+current_folder_path+"/filebeat/filebeat" +" -c "+current_folder_path+"/filebeat/filebeat.yml &"
         print run_string
-        run_filebeat= str(os.popen(run_string).read())
-        pass
+        os.system(run_string)
     except:
         pass
 if __name__ == '__main__':
     MakeConfigFilebeat()
     Runfilebeat()
-    print os.path.dirname(os.path.dirname(__file__))
+    print os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
+    print 1
