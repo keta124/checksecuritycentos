@@ -11,7 +11,11 @@ Send log terminal ( OPTION )
  A. Client
 
 - Wget and extract
-- Run "python setup.py" ( in folder Setup)
+  $ wget https://github.com/keta124/CheckSecurityCentos/archive/1.0.tar.gz
+  $ tar -xvf 1.0.tar.gz
+- Run "python setup.py" ( in folder setup)
+  $ cd setup
+  $ python setup.py
 - Crontab "python MonitorATTTMain.py" or call from Appmanager
 
 ++++++++++++++++
