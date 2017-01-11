@@ -17,6 +17,8 @@ Send log terminal ( OPTION )
   
 - Run "python setup.py" ( in folder setup)
 
+  $ cd CheckSecurityCentos-1.0/
+  
   $ cd setup
   
   $ python setup.py
