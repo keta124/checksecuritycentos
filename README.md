@@ -7,7 +7,8 @@ Check SSH status : user, ip & time login
 Check status port change : port open or close
 Send log terminal ( OPTION )
 +++++++++++++++
-A. Client
+
+ A. Client
 
 - Wget and extract
 - Run "python setup.py" ( in folder Setup)
@@ -38,7 +39,7 @@ Add in last line
 
 ++++++++++++
 
-B. Server : Logstash, Elasticsearch, Kibana
+ B. Server : Logstash, Elasticsearch, Kibana
 
 ++ Config logstash
 
