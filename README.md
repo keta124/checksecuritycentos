@@ -11,6 +11,7 @@ Send log terminal ( OPTION )
  A. Client
 
 - Wget and extract
+
   $ wget https://github.com/keta124/CheckSecurityCentos/archive/1.0.tar.gz
   
   $ tar -xvf 1.0.tar.gz
@@ -24,6 +25,8 @@ Send log terminal ( OPTION )
   $ python setup.py
   
 - Crontab "python MonitorATTTMain.py" or call from Appmanager
+
+**** Check iptables open output 192.168.142.101:5044
 
 ++++++++++++++++
  
