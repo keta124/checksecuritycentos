@@ -26,7 +26,7 @@ Send log terminal ( OPTION )
   
 - Crontab "python MonitorATTTMain.py" or call from Appmanager
 
-**** Check iptables open output 192.168.142.101:5044
+**** Check server could connect to 192.168.142.101 & iptables open output 192.168.142.101:5044
 
 ++++++++++++++++
  
