@@ -3,14 +3,15 @@ Created on Jan 6, 2017
 
 @author: sontn
 '''
-import os
+import os, sys
 import datetime
-def writefile(file_write,content):
+def writefile(file_write_,content):
     try:
-        path = os.getcwd()
+        path =os.path.abspath(os.path.dirname(sys.argv[0]))
         statinfo = os.stat(path)
         ## 
-        if str(file_write) == "Output/tmp_check_login_duplicate.log":
+        if str(file_write_) == "Output/tmp_check_login_duplicate.log":
+            file_write = path+"/"+str(file_write_)
             f = open(file_write,"wb")
             f.close()
             os.chown(file_write, statinfo.st_uid, statinfo.st_gid)
@@ -18,6 +19,7 @@ def writefile(file_write,content):
             f.write(content)
             f.close()
         else :
+            file_write = path+"/"+str(file_write_)
             f = open(file_write,"ab")
             f.close()
             os.chown(file_write, statinfo.st_uid, statinfo.st_gid)
@@ -27,8 +29,10 @@ def writefile(file_write,content):
     except:
         print "Except writefile"
 
-def compare_duplicate(file_write,content):
+def compare_duplicate(file_write_,content):
     try:
+        path =os.path.abspath(os.path.dirname(sys.argv[0]))
+        file_write = path+"/"+str(file_write_)
         f = open(file_write,"r+")
         lines = f.read()
         if lines == content:    
