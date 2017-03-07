@@ -12,13 +12,13 @@ Send log terminal ( OPTION )
 
 - Wget and extract
 
-  $ wget https://github.com/keta124/CheckSecurityCentos/archive/1.0.tar.gz
+  $ wget https://github.com/keta124/CheckSecurityCentos/archive/1.1.tar.gz
   
-  $ tar -xvf 1.0.tar.gz
+  $ tar -xvf 1.1.tar.gz
   
 - Run "python setup.py" ( in folder setup)
 
-  $ cd CheckSecurityCentos-1.0/
+  $ cd CheckSecurityCentos-1.1/
   
   $ cd setup
   
