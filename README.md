@@ -50,7 +50,7 @@ Add in last line
 
     local6.*                /var/log/attt_cmdlog.log
 
-
+- Restart rsyslog
 ++++++++++++
 
  B. Server : Logstash, Elasticsearch, Kibana
