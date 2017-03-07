@@ -3,15 +3,16 @@ Created on Jan 6, 2017
 
 @author: sontn
 '''
-import os
+import os,sys
 import datetime
 
-def writefile(file_write,content):
+def writefile(file_write_,content):
     try:
-        path = os.getcwd()
+        path =os.path.abspath(os.path.dirname(sys.argv[0]))
         statinfo = os.stat(path)
         ## 
-        if str(file_write) == "Output/tmp_check_port_duplicate.log":
+        if str(file_write_) == "Output/tmp_check_port_duplicate.log":
+            file_write = path+"/"+str(file_write_)
             f = open(file_write,"wb")
             f.close()
             os.chown(file_write, statinfo.st_uid, statinfo.st_gid)
@@ -19,6 +20,7 @@ def writefile(file_write,content):
             f.write(content)
             f.close()
         else :
+            file_write = path+"/"+str(file_write_)
             f = open(file_write,"ab")
             f.close()
             os.chown(file_write, statinfo.st_uid, statinfo.st_gid)
@@ -30,7 +32,9 @@ def writefile(file_write,content):
 
 def read_tmp_file():
     try:
-        f = open("Output/tmp_check_port_duplicate.log","r+")
+        path =os.path.abspath(os.path.dirname(sys.argv[0]))
+        file_tmp = path+"/"+"Output/tmp_check_port_duplicate.log"
+        f = open(file_tmp,"r+")
         lines = f.read()
         return lines
     except:
