@@ -6,7 +6,8 @@ Created on Jan 10, 2017
 import os
 def writefile(file_write,content):
     try:
-        path = os.getcwd()
+        #path = os.getcwd()
+	path = os.path.dirname(os.path.realpath(__file__))
         statinfo = os.stat(path)
         ## 
         f = open(file_write,"wb")

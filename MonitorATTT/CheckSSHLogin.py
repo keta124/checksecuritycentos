@@ -7,7 +7,7 @@ import os, sys
 import datetime
 def writefile(file_write_,content):
     try:
-        path =os.path.abspath(os.path.dirname(sys.argv[0]))
+        path = os.path.dirname(os.path.realpath(__file__))
         statinfo = os.stat(path)
         ## 
         if str(file_write_) == "Output/tmp_check_login_duplicate.log":

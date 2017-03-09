@@ -8,7 +8,7 @@ import datetime
 
 def writefile(file_write_,content):
     try:
-        path =os.path.abspath(os.path.dirname(sys.argv[0]))
+        path = os.path.dirname(os.path.realpath(__file__))
         statinfo = os.stat(path)
         ## 
         if str(file_write_) == "Output/tmp_check_port_duplicate.log":
@@ -32,7 +32,7 @@ def writefile(file_write_,content):
 
 def read_tmp_file():
     try:
-        path =os.path.abspath(os.path.dirname(sys.argv[0]))
+        path = os.path.dirname(os.path.realpath(__file__))
         file_tmp = path+"/"+"Output/tmp_check_port_duplicate.log"
         f = open(file_tmp,"r+")
         lines = f.read()
