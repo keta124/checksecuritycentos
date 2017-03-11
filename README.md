@@ -49,7 +49,7 @@ Add in last line
 Add in last line
 
     local6.info                /var/log/attt_cmdlog.log
-- $ chmod 666 /var/log/attt_cmdlog.log
+- $ chmod 644 /var/log/attt_cmdlog.log
 
 - Restart rsyslog
 ++++++++++++
