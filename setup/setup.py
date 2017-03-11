@@ -54,8 +54,8 @@ def readfileconfig():
         return {}
 def MakeConfigFilebeat():
     current_folder_path= os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
-    path_monitor_login = ""+str(current_folder_path)+"/MonitorATTT/Output/ATTT_login_ssh.log"
-    path_monitor_port = ""+str(current_folder_path)+"/MonitorATTT/Output/ATTT_port_change.log"
+    path_monitor_login = ""+str(current_folder_path)+"/monitorATTT/Output/ATTT_login_ssh.log"
+    path_monitor_port = ""+str(current_folder_path)+"/monitorATTT/Output/ATTT_port_change.log"
     dict_ ={'port_document_type': 'attt_monitor_port', 
             'path_monitor_login': path_monitor_login, 
             'port_logstash': '5044', 
@@ -77,12 +77,12 @@ def Runfilebeat():
     try:
         current_folder_path= os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
         run_string = "nohup "+current_folder_path+"/filebeat/filebeat" +" -c "+current_folder_path+"/filebeat/filebeat.yml &"
-        print run_string
+        #print run_string
         os.system(run_string)
     except:
         pass
 if __name__ == '__main__':
     MakeConfigFilebeat()
     Runfilebeat()
-    print os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
-    print 1
+    #print os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
+    print "OK"

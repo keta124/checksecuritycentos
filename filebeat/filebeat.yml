@@ -5,11 +5,11 @@ filebeat.prospectors:
   document_type: attt_monitor_cmdlog
 - input_type: log
   paths:
-    - /home/sontn/github/CheckSecurityCentos/MonitorATTT/Output/ATTT_login_ssh.log
+    - /home/sontn/github/checksecuritycentos/monitorATTT/Output/ATTT_login_ssh.log
   document_type: attt_monitor_login
 - input_type: log
   paths:
-    - /home/sontn/github/CheckSecurityCentos/MonitorATTT/Output/ATTT_port_change.log
+    - /home/sontn/github/checksecuritycentos/monitorATTT/Output/ATTT_port_change.log
   document_type: attt_monitor_port
 output.logstash:
   enabled: true

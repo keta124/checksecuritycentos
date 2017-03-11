@@ -17,11 +17,11 @@ path_monitor_cmdlog: "/var/log/attt_cmdlog.log"
 #cmdlog_document_type: "attt_monitor_cmdlog"
 
 ### Config attt_monitor_login
-#path_monitor_login: /home/vhgs/Check_Security_Centos/MonitorATTT/Output/ATTT_login_ssh.log
+#path_monitor_login: /home/vhgs/check_security_centos/monitorATTT/Output/ATTT_login_ssh.log
 
 #login_document_type: attt_monitor_login
 
 ### Config port_monitor
-#path_monitor_port: /home/vhgs/Check_Security_Centos/MonitorATTT/Output/ATTT_port_change.log
+#path_monitor_port: /home/vhgs/check_security_centos/monitorATTT/Output/ATTT_port_change.log
 
 #port_document_type: attt_monitor_port

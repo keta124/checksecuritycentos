@@ -12,19 +12,19 @@ Send log terminal ( OPTION )
 
 - Wget and extract
 
-  $ wget https://github.com/keta124/CheckSecurityCentos/archive/1.1.tar.gz
+  $ wget https://github.com/keta124/checksecuritycentos/archive/1.3.tar.gz
   
-  $ tar -xvf 1.1.tar.gz
+  $ tar -xvf 1.3.tar.gz
   
 - Run "python setup.py" ( in folder setup)
 
-  $ cd CheckSecurityCentos-1.1/
+  $ cd checksecuritycentos-1.3/
   
   $ cd setup
   
   $ python setup.py
   
-- Crontab "python MonitorATTTMain.py" or call from Appmanager
+- Crontab "python monitorATTTMain.py" or call from Appmanager
 
 **** Check server could connect to 192.168.142.101 & iptables open output 192.168.142.101:5044
 
