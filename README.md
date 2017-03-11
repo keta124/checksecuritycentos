@@ -39,7 +39,7 @@ Config send log terminal
  
 Add in last line
 
-    export PROMPT_COMMAND='RETRN_VAL=$?;logger -p local6.debug "[$(echo $SSH_CLIENT | cut -d" " -f1)] [$(hostname -I|sed "s/ /||/"g)] # $(history 1 | sed "s/^[ ]*[0-9]\+[ ]*//" )"'
+    export PROMPT_COMMAND='RETRN_VAL=$?;logger -p local6.info "[$(echo $SSH_CLIENT | cut -d" " -f1)] [$(hostname -I|sed "s/ /||/"g)] # $(history 1 | sed "s/^[ ]*[0-9]\+[ ]*//" )"'
 
 
 - Edit /etc/rsyslog.conf
@@ -48,7 +48,8 @@ Add in last line
 
 Add in last line
 
-    local6.*                /var/log/attt_cmdlog.log
+    local6.info                /var/log/attt_cmdlog.log
+- $ chmod 666 /var/log/attt_cmdlog.log
 
 - Restart rsyslog
 ++++++++++++
