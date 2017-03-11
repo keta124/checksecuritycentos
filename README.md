@@ -12,7 +12,7 @@ Send log terminal ( OPTION )
 
 - Wget and extract
 
-  $ wget https://github.com/keta124/checksecuritycentos/archive/1.3.tar.gz
+  $ wget https://github.com/keta124/CheckSecurityCentos/archive/1.3.tar.gz
   
   $ tar -xvf 1.3.tar.gz
   
