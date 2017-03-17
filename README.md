@@ -53,7 +53,7 @@ Add in last line
 
 - $ /etc/init.d/rsyslog restart
   
-set logrotate ( option)
+Set logrotate ( option)
 - $ vi /etc/logrotate.d/cmdlog
 
 		/var/log/cmdlog.log {
