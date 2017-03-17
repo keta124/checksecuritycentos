@@ -51,7 +51,24 @@ Add in last line
     local6.info                /var/log/attt_cmdlog.log
 - $ chmod 644 /var/log/attt_cmdlog.log
 
-- Restart rsyslog
+- $ /etc/init.d/rsyslog restart
+  
+- set logrotate ( option)
+- $ vi /etc/logrotate.d/attt_cmdlog.log
+ 
+
+      # /etc/logrotate.d/attt_cmdlog
+	    /var/log/attt_cmdlog.log
+	    {
+		    compress
+		    weekly
+		    rotate 12
+		    sharedscripts
+		    postrotate
+		    /bin/kill -HUP `cat /var/run/syslogd.pid 2> /dev/null` 2> /dev/null || true
+		    endscript
+	    }
+
 ++++++++++++
 
  B. Server : Logstash, Elasticsearch, Kibana
