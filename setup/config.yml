@@ -11,8 +11,8 @@ host_logstash: 192.168.142.101
 # default_port 5044
 port_logstash: 5044
 
-# Config attt_cmdlog
-path_monitor_cmdlog: "/var/log/attt_cmdlog.log"
+# Config cmdlog
+path_monitor_cmdlog: "/var/log/cmdlog.log"
 
 #cmdlog_document_type: "attt_monitor_cmdlog"
 
