@@ -1,7 +1,7 @@
 # CheckSecurityCentos
 ++++++++++++++++
 
-Version 1.1
+Version 1.5
 
 Check SSH status : user, ip & time login
 Check status port change : port open or close
@@ -12,13 +12,13 @@ Send log terminal ( OPTION )
 
 - Wget and extract
 
-  $ wget https://github.com/keta124/CheckSecurityCentos/archive/1.4.tar.gz
+  $ wget https://github.com/keta124/CheckSecurityCentos/archive/1.5.tar.gz
   
-  $ tar xvzf 1.4.tar.gz
+  $ tar xvzf 1.5.tar.gz
   
 - Run "python setup.py" ( in folder setup)
 
-  $ cd CheckSecurityCentos-1.4/
+  $ cd CheckSecurityCentos-1.5/
   
   $ cd setup
   
