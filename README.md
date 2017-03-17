@@ -54,9 +54,9 @@ Add in last line
 - $ /etc/init.d/rsyslog restart
   
 set logrotate ( option)
-- $ vi /etc/logrotate.d/cmdlog.log
+- $ vi /etc/logrotate.d/cmdlog
 
-		/var/log/cmdlog.log {
+		/var/log/cmdlog {
 	   		create 0644 root root
 	   		compress
 	   		weekly
