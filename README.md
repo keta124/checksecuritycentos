@@ -60,6 +60,7 @@ set logrotate ( option)
       # /etc/logrotate.d/cmdlog
 	    /var/log/cmdlog.log
 	    {
+	     	  create 0644 root root
 		  compress
 		  weekly
 		  rotate 12
