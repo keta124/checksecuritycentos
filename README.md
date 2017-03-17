@@ -57,16 +57,16 @@ set logrotate ( option)
 - $ vi /etc/logrotate.d/cmdlog.log
  
 
-	    /var/log/cmdlog.log {
-	    create 0644 root root
-	    compress
-	    weekly
-	    rotate 12
-	    sharedscripts
-	    postrotate
-	    	/bin/kill -HUP `cat /var/run/syslogd.pid 2> /dev/null` 2> /dev/null || true
-	    endscript
-	    }
+	 /var/log/cmdlog.log {
+	   create 0644 root root
+	   compress
+	   weekly
+	   rotate 12
+	   sharedscripts
+	   postrotate
+	   	/bin/kill -HUP `cat /var/run/syslogd.pid 2> /dev/null` 2> /dev/null || true
+	   endscript
+	}
 
 ++++++++++++
 
