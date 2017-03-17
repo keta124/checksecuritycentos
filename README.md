@@ -54,11 +54,11 @@ Add in last line
 - $ /etc/init.d/rsyslog restart
   
 set logrotate ( option)
-- $ vi /etc/logrotate.d/attt_cmdlog.log
+- $ vi /etc/logrotate.d/cmdlog.log
  
 
-      # /etc/logrotate.d/attt_cmdlog
-	    /var/log/attt_cmdlog.log
+      # /etc/logrotate.d/cmdlog
+	    /var/log/cmdlog.log
 	    {
 		  compress
 		  weekly
