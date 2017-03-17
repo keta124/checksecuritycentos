@@ -57,8 +57,7 @@ set logrotate ( option)
 - $ vi /etc/logrotate.d/cmdlog.log
  
 
-	    /var/log/cmdlog.log
-	    {
+	    /var/log/cmdlog.log {
 	    	create 0644 root root
 		compress
 		weekly
