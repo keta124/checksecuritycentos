@@ -49,9 +49,9 @@ Add in last line
 Add in last line
 
     local6.debug                /var/log/cmdlog.log
-- $ chmod 644 /var/log/cmdlog.log
 
 - $ /etc/init.d/rsyslog restart
+- $ chmod 644 /var/log/cmdlog.log
   
 Set logrotate ( option)
 - $ vi /etc/logrotate.d/cmdlog
