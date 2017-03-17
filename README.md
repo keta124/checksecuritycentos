@@ -59,7 +59,7 @@ set logrotate ( option)
 
 	    /var/log/cmdlog.log
 	    {
-	     	create 0644 root root
+	    	create 0644 root root
 		compress
 		weekly
 		rotate 12
