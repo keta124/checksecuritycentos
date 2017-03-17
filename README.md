@@ -60,13 +60,13 @@ set logrotate ( option)
       # /etc/logrotate.d/attt_cmdlog
 	    /var/log/attt_cmdlog.log
 	    {
-		compress
-		weekly
-		rotate 12
-		sharedscripts
-		postrotate
-		/bin/kill -HUP `cat /var/run/syslogd.pid 2> /dev/null` 2> /dev/null || true
-		endscript
+		 compress
+		 weekly
+		 rotate 12
+		 sharedscripts
+		 postrotate
+		 /bin/kill -HUP `cat /var/run/syslogd.pid 2> /dev/null` 2> /dev/null || true
+		 endscript
 	    }
 
 ++++++++++++
