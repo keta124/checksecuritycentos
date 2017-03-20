@@ -50,7 +50,7 @@ Add in last line
 
     local6.debug                /var/log/cmdlog.log
 
-- $ /etc/init.d/rsyslog restart
+- $ service rsyslog restart
 - $ chmod 644 /var/log/cmdlog.log
   
 Set logrotate ( option)
