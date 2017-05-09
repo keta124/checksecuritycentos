@@ -54,7 +54,7 @@ def is_valid_ip(address):
     except:
         return "0.0.0.0"
     
-def GetListLogin():
+def getListLogin():
     try:
         output= str(os.popen("last | grep still|grep pts|sed -n 's/ \+/ /gp'|cut -d ' ' -f1-7").read())
         hostname_ip = str(os.popen("hostname -I").read()).replace(" \n","").replace(" ","||")
