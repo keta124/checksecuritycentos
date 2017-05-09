@@ -10,7 +10,8 @@ if __name__ == '__main__':
     try:
         while True:
             list_Login= checkSSHLogin.getListLogin()
-            list_Port_Change= checkPortOpen.getListPortOpen()
+            #list_Port_Change= checkPortOpen.getListPortOpen()
             time.sleep(10)
+            print "OK"
     except:
         print "ERROR Except"
