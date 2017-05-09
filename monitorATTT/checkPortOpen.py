@@ -40,7 +40,7 @@ def read_tmp_file():
     except:
         return ""
 
-def GetListPortOpen():
+def getListPortOpen():
     try:
         hostname_ip = str(os.popen("hostname -I").read()).replace(" \n","").replace(" ","||")
         ## Get current port open
