@@ -1,0 +1,35 @@
+- Edit /etc/bashrc
+ 
+    $ vi /etc/bashrc
+ 
+Add in last line
+
+    export PROMPT_COMMAND='RETRN_VAL=$?;logger -p local6.debug "[$(echo $SSH_CLIENT | cut -d" " -f1)] # $(history 1 | sed "s/^[ ]*[0-9]\+[ ]*//" )"'
+
+
+- Edit /etc/rsyslog.conf
+
+    $ vi /etc/rsyslog.conf
+
+Add in last line
+
+    local6.debug                /var/log/cmdlog.log
+
+- $ service rsyslog restart
+- $ chmod 644 /var/log/cmdlog.log
+  
+Set logrotate ( option)
+- $ vi /etc/logrotate.d/cmdlog
+
+      /var/log/cmdlog.log {
+       create 0644 root root
+       compress
+       weekly
+       rotate 12
+       sharedscripts
+       postrotate
+        /bin/kill -HUP `cat /var/run/syslogd.pid 2> /dev/null` 2> /dev/null || true
+       endscript
+     }
+
+++++++++++++
